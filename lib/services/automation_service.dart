@@ -2438,65 +2438,57 @@ Action: $_lastFailedAction
       _lastLlmRequestedAt = DateTime.now();
     }
   }
-      final isComplete = decision['is_complete'] == true;
+
+  Future<bool> _executeDecision(
+    Map<String, dynamic> decision,
+    int screenHash,
+  ) async {
+    try {
+      // Extract action details (may still be present even if is_complete=true)
       final action = decision['action'] as String?;
-      final parameters = decision['parameters'] as Map<String, dynamic>? ?? {};
+      final parameters = Map<String, dynamic>.from(decision['parameters'] ?? {});
       final description = decision['description'] as String?;
+      final isComplete = decision['is_complete'] == true;
       final reasoning = decision['reasoning'] as String?;
-      final summary = decision['summary'] as String?;
-      final visualState = decision['visual_state'] as String?;
-      final nextSteps = decision['next_steps'] as String?;
 
-      // Update narrative summary & thinking state if provided
-      if (_session != null) {
-        if (summary != null) _session!.updateSummary(summary);
-        if (visualState != null) _session!.updateVisualState(visualState);
-        if (nextSteps != null) _session!.updateNextSteps(nextSteps);
-      }
+      // Log the AI decision
+      onLog?.call(
+        'ai_decision',
+        'Action: $action, Params: $parameters, Complete: $isComplete, Reasoning: $reasoning',
+      );
+      print(
+        '🤖 AI Decision: $action with params: $parameters${isComplete ? ' [COMPLETING]' : ''}',
+      );
 
-      if (!isComplete && action == null) {
-        return false;
-      }
-
-      // Validate action sequence to prevent shortcuts
+      // Validate action sequence to prevent problematic loops
       if (action != null && !_validateActionSequence(action, parameters)) {
-        return false;
-      }
+        print('❌ Action sequence validation failed for: $action');
+        _stepRetryCount++;
+        _lastError = 'Action sequence validation failed';
+        _lastFailedAction = action;
 
-      // STRICT BOUNDARY CHECK: Prevent Agent from Interacting with Itself
-      if (_lastContext != null && _lastContext!['current_app'] is Map) {
-        final currentFnPkg =
-            (_lastContext!['current_app']['packageName'] as String?) ?? '';
-
-        // Using hardcoded package name of our own app
-        if (currentFnPkg == 'com.vibeagent.dude') {
-          // If we are automating inside "Dude", ONLY allow leaving the app or opening another app
-          if (action != 'perform_home' &&
-              action != 'perform_back' &&
-              action != 'stopAutomation' &&
-              action != 'open_app_by_name') {
-            print(
-              '🚫 BOUNDARY VIOLATION: Agent attempting to interact with own UI ($action). Forcing Home.',
-            );
-            _notifyMessage(
-              '⚠️ Safety Boundary: Preventing self-interaction. Returning to Home Screen.',
-            );
-
-            // Override action to perform_home
-            await _executeAction('perform_home', {});
-            await Future.delayed(const Duration(seconds: 1));
-            return true;
-          }
+        if (_stepRetryCount >= 3) {
+          _notifyError('Action sequence continuously invalid after 3 retries.');
+          _stepRetryCount = 0;
+          _lastError = null;
+          _lastFailedAction = null;
+          return false; // Stop
         }
+
+        // Wait before retry
+        await Future.delayed(const Duration(seconds: 2));
+        return true; // Continue loop to retry
       }
 
-      // Send the raw JSON decision to UI instead of descriptive messages
-      _notifyMessage(jsonEncode(decision));
-
-      // Execute the action if provided and task is not complete
+      // Execute the action
       bool success = true;
-      if (action != null && !isComplete) {
+      if (action != null) {
         success = await _executeAction(action, parameters);
+        if (!success) {
+          print('❌ Action failed: $action');
+        }
+      } else {
+        print('⚠️ No action specified in decision, continuing...');
       }
 
       // Record in session

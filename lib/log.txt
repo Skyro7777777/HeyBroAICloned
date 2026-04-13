@@ -1,0 +1,1003 @@
+Run flutter build apk --debug
+Support for Android x86 targets will be removed in the next stable release after 3.27. See https://github.com/flutter/flutter/issues/157543 for details.
+Running Gradle task 'assembleDebug'...                          
+e: The daemon has terminated unexpectedly on startup attempt #1 with error code: 0. The daemon process output:
+    1. Kotlin compile daemon is ready
+Checking the license for package NDK (Side by side) 27.0.12077973 in /usr/local/lib/android/sdk/licenses
+License for package NDK (Side by side) 27.0.12077973 accepted.
+Preparing "Install NDK (Side by side) 27.0.12077973 v.27.0.12077973".
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" ready.
+Installing NDK (Side by side) 27.0.12077973 in /usr/local/lib/android/sdk/ndk/27.0.12077973
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" complete.
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" finished.
+lib/services/automation_service.dart:9:25: Error: Can't find '}' to match '{'.
+class AutomationService {
+                        ^
+lib/screens/task_chat_screen.dart:737:34: Error: The method 'executeActionDirectly' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named 'executeActionDirectly'.
+        await _automationService.executeActionDirectly(actionData);
+                                 ^^^^^^^^^^^^^^^^^^^^^
+lib/tools/tools_manager.dart:478:46: Error: The method 'performDynamicScroll' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named 'performDynamicScroll'.
+      final result = await automationService.performDynamicScroll(
+                                             ^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:137:7: Error: The method '_notifyError' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyError'.
+      _notifyError('Failed to execute task: $e');
+      ^^^^^^^^^^^^
+lib/services/automation_service.dart:225:7: Error: The method '_notifyError' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyError'.
+      _notifyError('Automation failed: $e');
+      ^^^^^^^^^^^^
+lib/services/automation_service.dart:239:7: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyMessage'.
+      _notifyMessage('🛑 Automation stopped by user');
+      ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:248:7: Error: The method '_notifyComplete' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+ ^
+lib/services/automation_service.dart:1240:2: Error: This couldn't be parsed.
+</original_code>```
+ ^
+lib/services/automation_service.dart:1240:17: Error: Expected '[' before this.
+</original_code>```
+                ^
+lib/services/automation_service.dart:1240:16: Error: Expected ';' after this.
+</original_code>```
+               ^
+lib/services/automation_service.dart:1240:17: Error: Expected an identifier, but got '`'.
+Try inserting an identifier before '`'.
+</original_code>```
+                ^
+lib/services/automation_service.dart:1240:17: Error: Expected ';' after this.
+</original_code>```
+                ^
+lib/services/automation_service.dart:1240:18: Error: Expected an identifier, but got '`'.
+Try inserting an identifier before '`'.
+</original_code>```
+                 ^
+lib/services/automation_service.dart:1240:18: Error: Expected ';' after this.
+</original_code>```
+                 ^
+lib/services/automation_service.dart:1240:19: Error: Expected an identifier, but got '`'.
+Try inserting an identifier before '`'.
+</original_code>```
+                  ^
+lib/services/automation_service.dart:1240:19: Error: Expected ';' after this.
+</original_code>```
+                  ^
+lib/services/automation_service.dart:1242:1: Error: Expected an identifier, but got '`'.
+Try inserting an identifier before '`'.
+```
+^
+lib/services/automation_service.dart:1242:1: Error: Expected ';' after this.
+```
+^
+lib/services/automation_service.dart:1242:2: Error: Expected an identifier, but got '`'.
+Try inserting an identifier before '`'.
+```
+ ^
+lib/services/automation_service.dart:1242:2: Error: Expected ';' after this.
+```
+ ^
+lib/services/automation_service.dart:1242:3: Error: Expected an identifier, but got '`'.
+Try inserting an identifier before '`'.
+```
+  ^
+lib/services/automation_service.dart:1242:3: Error: Expected ';' after this.
+```
+  ^
+lib/services/automation_service.dart:1243:1: Error: Expected ';' after this.
+import 'dart:convert';
+^^^^^^
+lib/services/automation_service.dart:1244:1: Error: Expected ';' after this.
+import 'dart:async';
+^^^^^^
+lib/services/automation_service.dart:1245:1: Error: Expected ';' after this.
+import 'package:flutter/services.dart';
+^^^^^^
+lib/services/automation_service.dart:1246:1: Error: Expected ';' after this.
+import '../puter_client.dart';
+^^^^^^
+lib/services/automation_service.dart:1247:1: Error: Expected ';' after this.
+import '../tools/tools_manager.dart';
+^^^^^^
+lib/services/automation_service.dart:1248:1: Error: Expected ';' after this.
+import 'automation/automation_models.dart';
+^^^^^^
+lib/services/automation_service.dart:1249:1: Error: Expected ';' after this.
+import '../secure_storage.dart';
+^^^^^^
+lib/services/automation_service.dart:1251:1: Error: 'class' can't be used as an identifier because it's a keyword.
+Try renaming this to be an identifier that isn't a keyword.
+class AutomationService {
+^^^^^
+lib/services/automation_service.dart:1251:1: Error: Expected ';' after this.
+class AutomationService {
+^^^^^
+lib/services/automation_service.dart:1251:7: Error: Expected ';' after this.
+class AutomationService {
+      ^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1253:3: Error: Can't have modifier 'static' here.
+Try removing 'static'.
+  static final AutomationService _instance = AutomationService._internal();
+  ^^^^^^
+lib/services/automation_service.dart:1254:3: Error: Expected ';' after this.
+  factory AutomationService() => _instance;
+  ^^^^^^^
+lib/services/automation_service.dart:1253:16: Error: Local variable 'AutomationService' can't be referenced before it is declared.
+  static final AutomationService _instance = AutomationService._internal();
+               ^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1254:11: Context: This is the declaration of the variable 'AutomationService'.
+  factory AutomationService() => _instance;
+          ^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1253:46: Error: Local variable 'AutomationService' can't be referenced before it is declared.
+  static final AutomationService _instance = AutomationService._internal();
+                                             ^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1254:11: Context: This is the declaration of the variable 'AutomationService'.
+  factory AutomationService() => _instance;
+          ^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1258:3: Error: Can't have modifier 'static' here.
+Try removing 'static'.
+  static const MethodChannel _channel = MethodChannel(
+  ^^^^^^
+lib/services/automation_service.dart:1300:8: Error: Expected ';' after this.
+  bool get isAutomating => _isAutomating;
+       ^^^
+lib/services/automation_service.dart:1300:25: Error: A function declaration needs an explicit list of parameters.
+Try adding a parameter list to the function declaration.
+  bool get isAutomating => _isAutomating;
+                        ^^
+lib/services/automation_service.dart:1301:8: Error: 'get' is already declared in this scope.
+  bool get isInitialized => _isInitialized;
+       ^^^
+lib/services/automation_service.dart:1300:8: Context: Previous declaration of 'get'.
+  bool get isAutomating => _isAutomating;
+       ^^^
+lib/services/automation_service.dart:1301:8: Error: Expected ';' after this.
+  bool get isInitialized => _isInitialized;
+       ^^^
+lib/services/automation_service.dart:1301:26: Error: A function declaration needs an explicit list of parameters.
+Try adding a parameter list to the function declaration.
+  bool get isInitialized => _isInitialized;
+                         ^^
+lib/services/automation_service.dart:1302:25: Error: 'get' is already declared in this scope.
+  Map<String, dynamic>? get lastTapCoordinates => _lastTapCoordinates;
+                        ^^^
+lib/services/automation_service.dart:1300:8: Context: Previous declaration of 'get'.
+  bool get isAutomating => _isAutomating;
+       ^^^
+lib/services/automation_service.dart:1302:25: Error: Expected ';' after this.
+  Map<String, dynamic>? get lastTapCoordinates => _lastTapCoordinates;
+                        ^^^
+lib/services/automation_service.dart:1302:48: Error: A function declaration needs an explicit list of parameters.
+Try adding a parameter list to the function declaration.
+  Map<String, dynamic>? get lastTapCoordinates => _lastTapCoordinates;
+                                               ^^
+lib/services/automation_service.dart:1321:37: Error: Local variable '_handleMethodCall' can't be referenced before it is declared.
+      _channel.setMethodCallHandler(_handleMethodCall);
+                                    ^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1345:19: Context: This is the declaration of the variable '_handleMethodCall'.
+  Future<dynamic> _handleMethodCall(MethodCall call) async {
+                  ^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1359:19: Error: Local variable 'startAutomation' can't be referenced before it is declared.
+            await startAutomation(userTask);
+                  ^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1387:16: Context: This is the declaration of the variable 'startAutomation'.
+  Future<void> startAutomation(String userMessage) async {
+               ^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1370:11: Error: Local variable 'stopAutomation' can't be referenced before it is declared.
+          stopAutomation();
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1476:8: Context: This is the declaration of the variable 'stopAutomation'.
+  void stopAutomation() {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1465:13: Error: Local variable '_executeAutomationLoop' can't be referenced before it is declared.
+      await _executeAutomationLoop();
+            ^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1495:16: Context: This is the declaration of the variable '_executeAutomationLoop'.
+  Future<void> _executeAutomationLoop() async {
+               ^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1508:35: Error: Local variable '_captureScreenContext' can't be referenced before it is declared.
+      final screenContext = await _captureScreenContext();
+                                  ^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1615:32: Context: This is the declaration of the variable '_captureScreenContext'.
+  Future<Map<String, dynamic>> _captureScreenContext() async {
+                               ^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1514:11: Error: Local variable '_isContextIdentical' can't be referenced before it is declared.
+          _isContextIdentical(previousContext, screenContext)) {
+          ^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1900:8: Context: This is the declaration of the variable '_isContextIdentical'.
+  bool _isContextIdentical(
+       ^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1557:22: Error: Local variable '_buildStepPrompt' can't be referenced before it is declared.
+      final prompt = _buildStepPrompt(screenContext, loopResult: loopResult);
+                     ^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2072:10: Context: This is the declaration of the variable '_buildStepPrompt'.
+  String _buildStepPrompt(
+         ^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1566:32: Error: Local variable '_getAIDecision' can't be referenced before it is declared.
+      final aiResponse = await _getAIDecision(prompt, image: visionImage);
+                               ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2365:33: Context: This is the declaration of the variable '_getAIDecision'.
+  Future<Map<String, dynamic>?> _getAIDecision(
+                                ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2560:7: Error: 'catch' can't be used as an identifier because it's a keyword.
+Try renaming this to be an identifier that isn't a keyword.
+    } catch (e) {
+      ^^^^^
+lib/services/automation_service.dart:2560:15: Error: Expected ';' after this.
+    } catch (e) {
+              ^
+lib/services/automation_service.dart:1238:5: Error: A try block must be followed by an 'on', 'catch', or 'finally' clause.
+Try adding either a catch or finally clause, or remove the try statement.
+    try {
+    ^^^
+lib/services/automation_service.dart:2462:30: Error: Local variable '_validateActionSequence' can't be referenced before it is declared.
+      if (action != null && !_validateActionSequence(action, parameters)) {
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2581:8: Context: This is the declaration of the variable '_validateActionSequence'.
+  bool _validateActionSequence(String action, Map<String, dynamic> parameters) {
+       ^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2231:12: Error: Local variable '_formatOcrTextWithLineNumbers' can't be referenced before it is declared.
+${hasOcr ? _formatOcrTextWithLineNumbers(ocrBlocks, imageWidth: ocrImageWidth, imageHeight: ocrImageHeight) : '[No readable text detected on screen]'}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2759:10: Context: This is the declaration of the variable '_formatOcrTextWithLineNumbers'.
+  String _formatOcrTextWithLineNumbers(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2486:19: Error: Local variable '_executeAction' can't be referenced before it is declared.
+            await _executeAction('perform_home', {});
+                  ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3467:16: Context: This is the declaration of the variable '_executeAction'.
+  Future<bool> _executeAction(
+               ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2499:25: Error: Local variable '_executeAction' can't be referenced before it is declared.
+        success = await _executeAction(action, parameters);
+                        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3467:16: Context: This is the declaration of the variable '_executeAction'.
+  Future<bool> _executeAction(
+               ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3439:18: Error: Local variable '_executeAction' can't be referenced before it is declared.
+    return await _executeAction('tap_element_by_index', parameters);
+                 ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3467:16: Context: This is the declaration of the variable '_executeAction'.
+  Future<bool> _executeAction(
+               ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3459:20: Error: Local variable '_executeAction' can't be referenced before it is declared.
+      return await _executeAction(action, parameters);
+                   ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3467:16: Context: This is the declaration of the variable '_executeAction'.
+  Future<bool> _executeAction(
+               ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2222:3: Error: Local variable '_formatElements' can't be referenced before it is declared.
+${_formatElements(screenElements)}
+  ^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3999:10: Context: This is the declaration of the variable '_formatElements'.
+  String _formatElements(List elements) {
+         ^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2225:3: Error: Local variable '_formatAccessibilityTree' can't be referenced before it is declared.
+${_formatAccessibilityTree(accessibilityTree)}
+  ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4066:10: Context: This is the declaration of the variable '_formatAccessibilityTree'.
+  String _formatAccessibilityTree(List tree) {
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4167:20: Error: Local variable '_commonPrefixLength' can't be referenced before it is declared.
+    final prefix = _commonPrefixLength(text, target).toDouble();
+                   ^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4172:7: Context: This is the declaration of the variable '_commonPrefixLength'.
+  int _commonPrefixLength(String a, String b) {
+      ^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1481:7: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+      _notifyMessage('🛑 Automation stopped by user');
+      ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2481:13: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+            _notifyMessage(
+            ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2494:7: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+      _notifyMessage(jsonEncode(decision));
+      ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2548:9: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+        _notifyMessage(jsonEncode(completionStatus));
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2596:9: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+        _notifyMessage(
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2617:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage(
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3316:7: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+      _notifyMessage('❌ Element not found with text: "$targetText"');
+      ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3324:5: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+    _notifyMessage('🎯 Found element [$index]: "$elementInfo"');
+    ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3325:5: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+    _notifyMessage(
+    ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3345:7: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+      _notifyMessage('❌ Element not found at index: $index');
+      ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3356:5: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+    _notifyMessage('🎯 Tapping element [$index]: "$elementText"');
+    ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3357:5: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+    _notifyMessage(
+    ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3385:7: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+      _notifyMessage('❌ Element not found with specified bounds');
+      ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3397:5: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+    _notifyMessage('🎯 Found element [$index]: "$elementText"');
+    ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3398:5: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+    _notifyMessage(
+    ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3420:9: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+        _notifyMessage(
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3435:5: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+    _notifyMessage(
+    ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3477:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage('💬 $text');
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3490:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage('❌ tap_vision requires x and y coordinates');
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3529:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage(
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3534:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage(
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3541:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage(
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3550:9: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+        _notifyMessage(
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3575:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage(
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3587:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage('❌ No index specified for element tap');
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3603:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage('❌ Invalid bounds specified for element tap');
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3622:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage('👁️ Vision mode: Tap input → Blind type');
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3633:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage('❌ Invalid line number for OCR tap. Use line >= 1');
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3662:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage('❌ No OCR blocks available to tap');
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3668:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage('❌ OCR line L$lineNum not found');
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3675:9: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+        _notifyMessage(
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3688:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage('❌ No text specified for OCR tap');
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3725:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage('❌ No OCR blocks available to tap');
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3737:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage(
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3750:9: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+        _notifyMessage(
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3767:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage('❌ Invalid OCR bounds');
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3771:9: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+        _notifyMessage(
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3787:9: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+        _notifyMessage(
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3842:9: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+        _notifyMessage('⌫ Backspace');
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3866:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage('❌ Internal scroll failed: Target element not found');
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3872:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage('❌ Internal scroll failed: Element has no bounds');
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3920:9: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+        _notifyMessage(
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3923:9: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+        _notifyMessage(
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3940:9: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+        _notifyMessage('❌ Action not available: $action');
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3952:13: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+            _notifyMessage('🎯 Vision mode: Using robust text input');
+            ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3965:15: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+              _notifyMessage('✅ Robust text input successful');
+              ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3968:15: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+              _notifyMessage('⚠️ Robust text input failed, trying fallback...');
+              ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3973:11: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+          _notifyMessage(
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3985:9: Error: Local variable '_notifyMessage' can't be referenced before it is declared.
+        _notifyMessage('🔁 Retrying $action after focusing input via OCR');
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4182:8: Context: This is the declaration of the variable '_notifyMessage'.
+  void _notifyMessage(String message) {
+       ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1379:7: Error: Local variable '_notifyError' can't be referenced before it is declared.
+      _notifyError('Failed to execute task: $e');
+      ^^^^^^^^^^^^
+lib/services/automation_service.dart:4188:8: Context: This is the declaration of the variable '_notifyError'.
+  void _notifyError(String error) {
+       ^^^^^^^^^^^^
+lib/services/automation_service.dart:1467:7: Error: Local variable '_notifyError' can't be referenced before it is declared.
+      _notifyError('Automation failed: $e');
+      ^^^^^^^^^^^^
+lib/services/automation_service.dart:4188:8: Context: This is the declaration of the variable '_notifyError'.
+  void _notifyError(String error) {
+       ^^^^^^^^^^^^
+lib/services/automation_service.dart:1573:11: Error: Local variable '_notifyError' can't be referenced before it is declared.
+          _notifyError('Failed to get AI response after 3 attempts');
+          ^^^^^^^^^^^^
+lib/services/automation_service.dart:4188:8: Context: This is the declaration of the variable '_notifyError'.
+  void _notifyError(String error) {
+       ^^^^^^^^^^^^
+lib/services/automation_service.dart:2520:11: Error: Local variable '_notifyError' can't be referenced before it is declared.
+          _notifyError('Step continuously failed after 3 retries.');
+          ^^^^^^^^^^^^
+lib/services/automation_service.dart:4188:8: Context: This is the declaration of the variable '_notifyError'.
+  void _notifyError(String error) {
+       ^^^^^^^^^^^^
+lib/services/automation_service.dart:2567:9: Error: Local variable '_notifyError' can't be referenced before it is declared.
+        _notifyError('Step failed after 3 retries: $e');
+        ^^^^^^^^^^^^
+lib/services/automation_service.dart:4188:8: Context: This is the declaration of the variable '_notifyError'.
+  void _notifyError(String error) {
+       ^^^^^^^^^^^^
+lib/services/automation_service.dart:3993:7: Error: Local variable '_notifyError' can't be referenced before it is declared.
+      _notifyError('Tool execution failed: $action - $e');
+      ^^^^^^^^^^^^
+lib/services/automation_service.dart:4188:8: Context: This is the declaration of the variable '_notifyError'.
+  void _notifyError(String error) {
+       ^^^^^^^^^^^^
+lib/services/automation_service.dart:1490:7: Error: Local variable '_notifyComplete' can't be referenced before it is declared.
+      _notifyComplete();
+      ^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4197:8: Context: This is the declaration of the variable '_notifyComplete'.
+  void _notifyComplete() {
+       ^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2550:9: Error: Local variable '_notifyComplete' can't be referenced before it is declared.
+        _notifyComplete();
+        ^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4197:8: Context: This is the declaration of the variable '_notifyComplete'.
+  void _notifyComplete() {
+       ^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4193:5: Error: Local variable '_notifyAndroidCompletion' can't be referenced before it is declared.
+    _notifyAndroidCompletion(false, error);
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4206:16: Context: This is the declaration of the variable '_notifyAndroidCompletion'.
+  Future<void> _notifyAndroidCompletion(bool success, [String? error]) async {
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4202:5: Error: Local variable '_notifyAndroidCompletion' can't be referenced before it is declared.
+    _notifyAndroidCompletion(true);
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4206:16: Context: This is the declaration of the variable '_notifyAndroidCompletion'.
+  Future<void> _notifyAndroidCompletion(bool success, [String? error]) async {
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3619:17: Error: Local variable '_ensureInputFocusBeforeTyping' can't be referenced before it is declared.
+          await _ensureInputFocusBeforeTyping(textToType, force: true);
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4233:16: Context: This is the declaration of the variable '_ensureInputFocusBeforeTyping'.
+  Future<void> _ensureInputFocusBeforeTyping(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3987:15: Error: Local variable '_ensureInputFocusBeforeTyping' can't be referenced before it is declared.
+        await _ensureInputFocusBeforeTyping(textToType, force: true);
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4233:16: Context: This is the declaration of the variable '_ensureInputFocusBeforeTyping'.
+  Future<void> _ensureInputFocusBeforeTyping(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3623:17: Error: Local variable '_visionModeTapInputField' can't be referenced before it is declared.
+          await _visionModeTapInputField();
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4346:16: Context: This is the declaration of the variable '_visionModeTapInputField'.
+  Future<void> _visionModeTapInputField() async {
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4246:29: Error: Local variable '_findBestUnprocessedEditableIndex' can't be referenced before it is declared.
+        final editableIdx = _findBestUnprocessedEditableIndex(a11y);
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4452:7: Context: This is the declaration of the variable '_findBestUnprocessedEditableIndex'.
+  int _findBestUnprocessedEditableIndex(List a11y) {
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3592:26: Error: Local variable '_getElementsFromLastContext' can't be referenced before it is declared.
+        final elements = _getElementsFromLastContext();
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4474:17: Context: This is the declaration of the variable '_getElementsFromLastContext'.
+  List<dynamic> _getElementsFromLastContext() {
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3608:26: Error: Local variable '_getElementsFromLastContext' can't be referenced before it is declared.
+        final elements = _getElementsFromLastContext();
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4474:17: Context: This is the declaration of the variable '_getElementsFromLastContext'.
+  List<dynamic> _getElementsFromLastContext() {
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3857:26: Error: Local variable '_getElementsFromLastContext' can't be referenced before it is declared.
+        final elements = _getElementsFromLastContext();
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4474:17: Context: This is the declaration of the variable '_getElementsFromLastContext'.
+  List<dynamic> _getElementsFromLastContext() {
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1854:9: Error: Local variable '_resetFieldTracking' can't be referenced before it is declared.
+        _resetFieldTracking();
+        ^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4487:8: Context: This is the declaration of the variable '_resetFieldTracking'.
+  void _resetFieldTracking() {
+       ^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1877:7: Error: Local variable '_resetFieldTracking' can't be referenced before it is declared.
+      _resetFieldTracking();
+      ^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4487:8: Context: This is the declaration of the variable '_resetFieldTracking'.
+  void _resetFieldTracking() {
+       ^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1853:11: Error: Local variable '_hasScreenChanged' can't be referenced before it is declared.
+      if (_hasScreenChanged(context)) {
+          ^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4494:8: Context: This is the declaration of the variable '_hasScreenChanged'.
+  bool _hasScreenChanged(Map<String, dynamic> newContext) {
+       ^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1678:29: Error: Local variable '_detectSystemDialogs' can't be referenced before it is declared.
+      final systemDialogs = _detectSystemDialogs(accessibilityTree, currentApp);
+                            ^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4509:30: Context: This is the declaration of the variable '_detectSystemDialogs'.
+  List<Map<String, dynamic>> _detectSystemDialogs(
+                             ^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2228:30: Error: Local variable '_formatSystemDialogs' can't be referenced before it is declared.
+${systemDialogs.isNotEmpty ? _formatSystemDialogs(systemDialogs) : '[Clean screen - no system interruptions]'}
+                             ^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4586:10: Context: This is the declaration of the variable '_formatSystemDialogs'.
+  String _formatSystemDialogs(List<Map<String, dynamic>> systemDialogs) {
+         ^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4640:33: Error: Local variable '_createContextSnapshot' can't be referenced before it is declared.
+        final currentSnapshot = _createContextSnapshot(currentContext);
+                                ^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4731:10: Context: This is the declaration of the variable '_createContextSnapshot'.
+  String _createContextSnapshot(Map<String, dynamic> context) {
+         ^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4698:29: Error: Local variable '_createContextSnapshot' can't be referenced before it is declared.
+        final newSnapshot = _createContextSnapshot(newContext);
+                            ^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4731:10: Context: This is the declaration of the variable '_createContextSnapshot'.
+  String _createContextSnapshot(Map<String, dynamic> context) {
+         ^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4643:23: Error: Local variable '_checkTargetCondition' can't be referenced before it is declared.
+        targetFound = _checkTargetCondition(currentContext, targetText);
+                      ^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4757:8: Context: This is the declaration of the variable '_checkTargetCondition'.
+  bool _checkTargetCondition(Map<String, dynamic> context, String targetText) {
+       ^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4701:23: Error: Local variable '_checkTargetCondition' can't be referenced before it is declared.
+        targetFound = _checkTargetCondition(newContext, targetText);
+                      ^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4757:8: Context: This is the declaration of the variable '_checkTargetCondition'.
+  bool _checkTargetCondition(Map<String, dynamic> context, String targetText) {
+       ^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4712:25: Error: Local variable '_fuzzyMatchTarget' can't be referenced before it is declared.
+          targetFound = _fuzzyMatchTarget(newContext, targetText);
+                        ^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4789:8: Context: This is the declaration of the variable '_fuzzyMatchTarget'.
+  bool _fuzzyMatchTarget(Map<String, dynamic> context, String targetText) {
+       ^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4664:40: Error: Local variable '_getReverseDirection' can't be referenced before it is declared.
+              final reverseDirection = _getReverseDirection(direction);
+                                       ^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4822:10: Context: This is the declaration of the variable '_getReverseDirection'.
+  String _getReverseDirection(String direction) {
+         ^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3704:26: Error: Local variable '_lastContextLooksLikeWeb' can't be referenced before it is declared.
+        final looksWeb = _lastContextLooksLikeWeb();
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4837:8: Context: This is the declaration of the variable '_lastContextLooksLikeWeb'.
+  bool _lastContextLooksLikeWeb() {
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4267:47: Error: Local variable '_lastContextLooksLikeWeb' can't be referenced before it is declared.
+          ((a11y is! List) || a11y.isEmpty || _lastContextLooksLikeWeb())) {
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:4837:8: Context: This is the declaration of the variable '_lastContextLooksLikeWeb'.
+  bool _lastContextLooksLikeWeb() {
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1243:1: Error: The getter 'import' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'import'.
+import 'dart:convert';
+^^^^^^
+lib/services/automation_service.dart:1244:1: Error: The getter 'import' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'import'.
+import 'dart:async';
+^^^^^^
+lib/services/automation_service.dart:1245:1: Error: The getter 'import' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'import'.
+import 'package:flutter/services.dart';
+^^^^^^
+lib/services/automation_service.dart:1246:1: Error: The getter 'import' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'import'.
+import '../puter_client.dart';
+^^^^^^
+lib/services/automation_service.dart:1247:1: Error: The getter 'import' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'import'.
+import '../tools/tools_manager.dart';
+^^^^^^
+lib/services/automation_service.dart:1248:1: Error: The getter 'import' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'import'.
+import 'automation/automation_models.dart';
+^^^^^^
+lib/services/automation_service.dart:1249:1: Error: The getter 'import' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'import'.
+import '../secure_storage.dart';
+^^^^^^
+lib/services/automation_service.dart:1251:1: Error: The getter 'class' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'class'.
+class AutomationService {
+^^^^^
+lib/services/automation_service.dart:1254:3: Error: The getter 'factory' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'factory'.
+  factory AutomationService() => _instance;
+  ^^^^^^^
+lib/services/automation_service.dart:1379:7: Error: The method '_notifyError' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyError'.
+      _notifyError('Failed to execute task: $e');
+      ^^^^^^^^^^^^
+lib/services/automation_service.dart:1467:7: Error: The method '_notifyError' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyError'.
+      _notifyError('Automation failed: $e');
+      ^^^^^^^^^^^^
+lib/services/automation_service.dart:1481:7: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyMessage'.
+      _notifyMessage('🛑 Automation stopped by user');
+      ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1490:7: Error: The method '_notifyComplete' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyComplete'.
+      _notifyComplete();
+      ^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1573:11: Error: The method '_notifyError' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyError'.
+          _notifyError('Failed to get AI response after 3 attempts');
+          ^^^^^^^^^^^^
+lib/services/automation_service.dart:1678:29: Error: The method '_detectSystemDialogs' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_detectSystemDialogs'.
+      final systemDialogs = _detectSystemDialogs(accessibilityTree, currentApp);
+                            ^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1853:11: Error: The method '_hasScreenChanged' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_hasScreenChanged'.
+      if (_hasScreenChanged(context)) {
+          ^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1854:9: Error: The method '_resetFieldTracking' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_resetFieldTracking'.
+        _resetFieldTracking();
+        ^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:1877:7: Error: The method '_resetFieldTracking' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_resetFieldTracking'.
+      _resetFieldTracking();
+      ^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2222:3: Error: The method '_formatElements' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_formatElements'.
+${_formatElements(screenElements)}
+  ^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2225:3: Error: The method '_formatAccessibilityTree' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_formatAccessibilityTree'.
+${_formatAccessibilityTree(accessibilityTree)}
+  ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2228:30: Error: The method '_formatSystemDialogs' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_formatSystemDialogs'.
+${systemDialogs.isNotEmpty ? _formatSystemDialogs(systemDialogs) : '[Clean screen - no system interruptions]'}
+                             ^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2231:12: Error: The method '_formatOcrTextWithLineNumbers' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_formatOcrTextWithLineNumbers'.
+${hasOcr ? _formatOcrTextWithLineNumbers(ocrBlocks, imageWidth: ocrImageWidth, imageHeight: ocrImageHeight) : '[No readable text detected on screen]'}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2462:30: Error: The method '_validateActionSequence' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_validateActionSequence'.
+      if (action != null && !_validateActionSequence(action, parameters)) {
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2481:13: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyMessage'.
+            _notifyMessage(
+            ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2486:19: Error: The method '_executeAction' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_executeAction'.
+            await _executeAction('perform_home', {});
+                  ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2494:7: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyMessage'.
+      _notifyMessage(jsonEncode(decision));
+      ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2499:25: Error: The method '_executeAction' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_executeAction'.
+        success = await _executeAction(action, parameters);
+                        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2520:11: Error: The method '_notifyError' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyError'.
+          _notifyError('Step continuously failed after 3 retries.');
+          ^^^^^^^^^^^^
+lib/services/automation_service.dart:2548:9: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyMessage'.
+        _notifyMessage(jsonEncode(completionStatus));
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2550:9: Error: The method '_notifyComplete' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyComplete'.
+        _notifyComplete();
+        ^^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2560:7: Error: The method 'catch' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named 'catch'.
+    } catch (e) {
+      ^^^^^
+lib/services/automation_service.dart:2560:14: Error: The getter 'e' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'e'.
+    } catch (e) {
+             ^
+lib/services/automation_service.dart:2561:46: Error: The getter 'e' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'e'.
+      print('❌ Error executing AI decision: $e');
+                                             ^
+lib/services/automation_service.dart:2563:20: Error: The getter 'e' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'e'.
+      _lastError = e.toString();
+                   ^
+lib/services/automation_service.dart:2567:9: Error: The method '_notifyError' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyError'.
+        _notifyError('Step failed after 3 retries: $e');
+        ^^^^^^^^^^^^
+lib/services/automation_service.dart:2567:53: Error: The getter 'e' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'e'.
+        _notifyError('Step failed after 3 retries: $e');
+                                                    ^
+lib/services/automation_service.dart:2596:9: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyMessage'.
+        _notifyMessage(
+        ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:2617:11: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyMessage'.
+          _notifyMessage(
+          ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3316:7: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyMessage'.
+      _notifyMessage('❌ Element not found with text: "$targetText"');
+      ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3324:5: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyMessage'.
+    _notifyMessage('🎯 Found element [$index]: "$elementInfo"');
+    ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3325:5: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyMessage'.
+    _notifyMessage(
+    ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3345:7: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyMessage'.
+      _notifyMessage('❌ Element not found at index: $index');
+      ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3356:5: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyMessage'.
+    _notifyMessage('🎯 Tapping element [$index]: "$elementText"');
+    ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3357:5: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+ - 'AutomationService' is from 'package:Heybro/services/automation_service.dart' ('lib/services/automation_service.dart').
+Try correcting the name to the name of an existing method, or defining a method named '_notifyMessage'.
+    _notifyMessage(
+    ^^^^^^^^^^^^^^
+lib/services/automation_service.dart:3385:7: Error: The method '_notifyMessage' isn't defined for the class 'AutomationService'.
+Target kernel_snapshot_program failed: Exception
+FAILURE: Build failed with an exception.
+* What went wrong:
+Execution failed for task ':app:compileFlutterBuildDebug'.
+> Process 'command '/opt/hostedtoolcache/flutter/stable-3.29.3-x64/flutter/bin/flutter'' finished with non-zero exit value 1
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+BUILD FAILED in 3m 34s
+Running Gradle task 'assembleDebug'...                            215.2s
+Gradle task assembleDebug failed with exit code 1
+Error: Process completed with exit code 1.
