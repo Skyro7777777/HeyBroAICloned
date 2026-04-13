@@ -1,0 +1,209 @@
+============================================================
+ANDROID BUILD & EMULATOR REFERENCE - SpecialTools Project
+============================================================
+Last updated: April 2026
+OS: Windows 11, PowerShell 7
+Project: SpecialTools (com.special.tools) - Android TV Launcher/Browser
+
+============================================================
+1. JAVA JDK 17
+============================================================
+Path:       C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\
+JAVA_HOME:  C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\
+java.exe:   C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin\java.exe
+Version:    OpenJDK 17.0.18 (Temurin-17.0.18+8)
+
+Note: This JDK is on system PATH so Gradle picks it up automatically.
+The project requires Java 17 (set in app/build.gradle compileOptions).
+
+============================================================
+2. ANDROID SDK (ANDROID_HOME)
+============================================================
+ANDROID_HOME / sdk.dir:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK
+
+Key subdirectories:
+  platform-tools\  -> adb.exe (Android Debug Bridge)
+  emulator\        -> emulator.exe (AVD emulator)
+  build-tools\     -> aapt2, d8, zipalign, apksigner
+  platforms\       -> android.jar for each API level
+  system-images\   -> emulator OS images
+  cmdline-tools\   -> sdkmanager, avdmanager
+
+============================================================
+3. ANDROID BUILD TOOLS
+============================================================
+Installed build-tools versions:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\build-tools\35.0.1  (latest)
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\build-tools\35.0.0
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\build-tools\34.0.0
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\build-tools\30.0.3
+
+Latest active: 35.0.1
+
+============================================================
+4. PLATFORM SDK VERSIONS
+============================================================
+Installed platforms:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platforms\android-35  (compileSdk)
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platforms\android-34
+
+Project config:
+  compileSdk = 35
+  targetSdk  = 33
+  minSdk     = 28
+
+============================================================
+5. EMULATOR SYSTEM IMAGE  #Use only if app is for TV and HeyBro is for now only for mobile so don't use.
+============================================================
+Installed image:
+  android-36\android-tv\x86
+  Full path:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\system-images\android-36\android-tv\x86
+
+AVD name used: Android_TV_1080p_API_36
+
+============================================================
+6. KEY EXECUTABLES (full paths)
+============================================================
+ADB:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe
+
+Emulator:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\emulator\emulator.exe
+
+SDK Manager:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\cmdline-tools\latest\bin\sdkmanager.bat
+
+AVD Manager:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\cmdline-tools\latest\bin\avdmanager.bat
+
+Java:
+  C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin\java.exe
+
+Gradle Wrapper (project-local):
+  e:\SteamLibrary\Programming\Java Projects\Creativity on coding\SpecialTools\gradlew.bat
+
+Gradle version: 8.10.2 (downloaded by wrapper automatically)
+  Distribution URL: https://services.gradle.org/distributions/gradle-8.10.2-bin.zip
+  AGP version: 8.7.0 (com.android.application)
+
+============================================================
+7. COMMON BUILD COMMANDS (run from project root)
+============================================================
+Project root:
+  e:\SteamLibrary\Programming\Java Projects\Creativity on coding\SpecialTools
+
+Build debug APK:
+  .\gradlew.bat assembleDebug
+
+Build release APK:
+  .\gradlew.bat assembleRelease
+
+Clean build:
+  .\gradlew.bat clean assembleDebug
+
+Install debug APK on connected device/emulator:
+  .\gradlew.bat installDebug
+
+Uninstall from device:
+  .\gradlew.bat uninstallDebug
+
+Output APK location (debug):
+  app\build\outputs\apk\debug\app-debug.apk
+
+Output APK location (release):
+  app\build\outputs\apk\release\app-release.apk
+
+============================================================
+8. EMULATOR COMMANDS
+============================================================
+Start emulator (named Android_TV_1080p_API_36):
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\emulator\emulator.exe -avd Android_TV_1080p_API_36
+
+Start emulator with no-window (headless, for CI):
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\emulator\emulator.exe -avd Android_TV_1080p_API_36 -no-window
+
+List available AVDs:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\emulator\emulator.exe -list-avds
+
+Check if emulator is running:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe devices
+
+Wait for emulator to boot (useful in scripts):
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe shell getprop sys.boot_completed
+
+============================================================
+9. ADB COMMANDS (app-specific)
+============================================================
+Install APK manually:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe install app\build\outputs\apk\debug\app-debug.apk
+
+Uninstall app:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe uninstall com.special.tools
+
+Force-stop app:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe shell am force-stop com.special.tools
+
+Launch app:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe shell am start -n com.special.tools/.MainActivity
+
+Clear app data (reset to fresh install):
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe shell pm clear com.special.tools
+
+View real-time logcat (filtered to app):
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe logcat --pid=$(adb shell pidof com.special.tools)
+
+View all logcat:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe logcat
+
+Dump ANR traces:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe pull /data/anr/anr_trace.txt
+
+View GPU/rendering info:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe shell dumpsys gfxinfo com.special.tools
+
+View memory usage:
+  E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe shell dumpsys meminfo com.special.tools
+
+============================================================
+10. ENVIRONMENT VARIABLES (set in Windows)
+============================================================
+JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\
+ANDROID_HOME=E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK
+ANDROID_SDK_ROOT=E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK
+
+PATH includes:
+  %JAVA_HOME%\bin
+  %ANDROID_HOME%\platform-tools
+  %ANDROID_HOME%\emulator
+
+============================================================
+11. QUICK WORKFLOW: Build + Install + Launch + Logcat
+============================================================
+# Step 1: Build
+.\gradlew.bat assembleDebug
+
+# Step 2: Install on emulator (must be running)
+.\gradlew.bat installDebug
+
+# Step 3: Launch the app
+E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe shell am start -n com.special.tools/.MainActivity
+
+# Step 4: Watch logs
+E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe logcat --pid=$(E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe shell pidof com.special.tools)
+
+# Or all-in-one build + install:
+.\gradlew.bat installDebug && E:\SteamLibrary\IInstalled_Programs\ANDROID\ANDROID_SDK\platform-tools\adb.exe shell am start -n com.special.tools/.MainActivity
+
+============================================================
+12. GRADLE CONFIGURATION
+============================================================
+Gradle JVM args (from gradle.properties):
+  -Xmx2048m -Dfile.encoding=UTF-8
+
+Gradle version: 8.10.2
+AGP (Android Gradle Plugin): 8.7.0
+Required Java: 17
+Gradle wrapper: gradlew.bat (Unix: ./gradlew)
+Gradle home (auto-managed): %USERPROFILE%\.gradle\wrapper\dists\gradle-8.10.2-bin\...

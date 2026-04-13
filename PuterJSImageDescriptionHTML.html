@@ -1,0 +1,45 @@
+<html>
+
+<body>
+    <script src="https://js.puter.com/v2/"></script>
+    <img id="sourceImage" src="Screenshot 2025-05-11 124932.png" style="display:block;">
+    <canvas id="resizeCanvas" style="display:none;"></canvas>
+    <script>
+        // Loading ...
+        puter.print(`Loading...`);
+
+        // Resize image to 224x224 before AI analysis
+        const img = document.getElementById('sourceImage');
+        const canvas = document.getElementById('resizeCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function analyzeImage() {
+            canvas.width = 224;
+            canvas.height = 224;
+
+            // Draw resized image on canvas
+            ctx.drawImage(img, 0, 0, 224, 224);
+
+            // Convert canvas to data URL
+            const dataUrl = canvas.toDataURL('image/jpeg', 0.9);
+            puter.print(`Image Desciption... `);
+
+            // Image analysis with GPT-5.4 nano using resized image as data URL
+            puter.ai
+                .chat(`What do you see?`, dataUrl, {
+                    model: "gpt-5.4-nano",
+                })
+                .then(puter.print)
+                .catch(err => puter.print(`Error: ${err}`));
+        }
+
+        if (img.complete) {
+            analyzeImage();
+        } else {
+            img.onload = analyzeImage;
+            img.onerror = function () { puter.print('Error loading image'); };
+        }
+    </script>
+</body>
+
+</html>
